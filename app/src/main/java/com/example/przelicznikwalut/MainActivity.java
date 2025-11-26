@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         resultText = findViewById(R.id.resultText);
         fromCurrencyFlag = findViewById(R.id.fromCurrencyFlag);
         toCurrencyFlag = findViewById(R.id.toCurrencyFlag);
-
+        loadSavedPreferences();
         sharedPreferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
     }
 
