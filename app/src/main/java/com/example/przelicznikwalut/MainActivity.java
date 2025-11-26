@@ -42,13 +42,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        initViews();
-        setupSpinners();
-        setupListeners();
-        loadSavedPreferences();
-    }
-
-    private void initViews() {
         amountInput = findViewById(R.id.amountInput);
         fromCurrencySpinner = findViewById(R.id.fromCurrencySpinner);
         toCurrencySpinner = findViewById(R.id.toCurrencySpinner);
@@ -59,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
         sharedPreferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
     }
+
 
     private void setupSpinners() {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(
